@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.2 on win32)" generated="2024-11-04T15:45:37.373029" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\njack\OneDrive\Desktop\Robot-Suite\tests\login_test.robot">
+<test id="s1-t1" name="User Can Log In Successfully" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T15:45:38.056011" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T15:45:38.055009" elapsed="3.765274"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T15:45:41.823282" elapsed="0.110557"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T15:45:41.937846" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${STANDARD_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T15:45:41.935840" elapsed="0.422255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T15:45:42.360096" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T15:45:42.359113" elapsed="0.273641"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T15:45:42.633750" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T15:45:42.633750" elapsed="0.245790"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_PAGE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-04T15:45:42.882543" elapsed="0.126610"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-04T15:45:43.040151" level="INFO">Element 'id=inventory_container' is displayed.</msg>
+<arg>${PRODUCT_PAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-04T15:45:43.010146" elapsed="0.030005"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-04T15:45:43.041153" elapsed="2.539087"/>
+</kw>
+<doc>This test case verifies that a user can log in to the Sauce Labs demo site.</doc>
+<status status="PASS" start="2024-11-04T15:45:38.053009" elapsed="7.528232"/>
+</test>
+<status status="PASS" start="2024-11-04T15:45:37.378027" elapsed="8.206216"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
